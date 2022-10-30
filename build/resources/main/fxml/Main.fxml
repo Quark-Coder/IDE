@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="axl.ide.MainController">
+   <children>
+      <Button layoutX="457.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="32.0" prefWidth="142.0" text="RUN" />
+      <TabPane layoutX="200.0" layoutY="32.0" prefHeight="364.0" prefWidth="395.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Hello.class">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="331.0" prefWidth="418.0">
+                     <children>
+                        <TextArea prefHeight="319.0" prefWidth="395.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <TreeView fx:id="treeView" layoutY="32.0" onContextMenuRequested="#selectItem" onMouseClicked="#selectItem" prefHeight="368.0" prefWidth="200.0" />
+      <MenuBar prefHeight="18.0" prefWidth="456.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="openDirectory" mnemonicParsing="false" onAction="#selectDirectory" text="Open directory" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
